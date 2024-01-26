@@ -14,15 +14,15 @@ const req = {
 
 describe("Auth Tests", () => {
 
-    beforeEach(() => {
+    beforeEach((done) => {
         //Start a Database Connection
         mongoose.connect('mongodb://127.0.0.1:27017/test')
     })
-    afterEach(() => {    
+    afterEach((done) => {    
         mongoose.connection.db.dropDatabase(() => {
-            mongoose.connection.close(() => done())
+            mongoose.connection.close(() => done());
         });
-    })
+    });
 
     it("POST /api/user", async () => {
         await request(server).post("/api/user")
