@@ -20,11 +20,11 @@ describe("Auth Tests", () => {
     
 });
 
-    // afterEach((done) => {    
-    //     mongoose.connection.db.dropDatabase(() => {
-    //         mongoose.connection.close(() => done());
-    //     });
-    // });
+    afterEach((done) => {    
+        mongoose.connection.db.dropDatabase(() => {
+            mongoose.connection.close(() => done());
+        });
+    });
 
     it("POST /api/user", async () => {
         await request(server).post("/api/user")
