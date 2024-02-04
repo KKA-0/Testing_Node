@@ -23,6 +23,6 @@ mongoose.connect('mongodb+srv://admin:admin@cluster0.un0qo4j.mongodb.net/?retryW
 
 app.listen(port, () => {
 
-  console.log(`Server of PORT: ${port}`)
+  console.log(`Server on PORT: ${port}`)
 
 })
