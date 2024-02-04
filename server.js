@@ -22,5 +22,5 @@ app.use('/api', auth)
 mongoose.connect('mongodb+srv://admin:admin@cluster0.un0qo4j.mongodb.net/?retryWrites=true&w=majority').then(()=> {console.log("DB connection Complete")}).catch((err) => {console.log("DB connection error", err)})
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Oops ${port}`)
 })
